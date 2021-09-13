@@ -1,0 +1,27 @@
+{
+  "name": "sculpter",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingwith3dv/sculpter.git"
+  },
+  "keywords": [
+    "component",
+    "web",
+    "components",
+    "framework",
+    "sculpter",
+    "ui"
+  ],
+  "author": "codingwith3dv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codingwith3dv/sculpter/issues"
+  },
+  "homepage": "https://github.com/codingwith3dv/sculpter#readme"
+}
