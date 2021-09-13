@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "target": "esnext",
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "rootDir": ".",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "allowJs": true,
+    "declaration": true,
+    "outDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true
+  },
+  "includes": [
+    "src/**/*.ts"
+  ]
+}
