@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
     "composite": true,
-    "target": "esnext",
+    "target": "es2015",
     "experimentalDecorators": true,
-    "module": "esnext",
-    "rootDir": ".",
+    "module": "es2015",
     "moduleResolution": "node",
-    "baseUrl": ".",
     "allowJs": true,
     "declaration": true,
     "outDir": "dist",
