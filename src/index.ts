@@ -1,10 +1,10 @@
 import {
   SculpterElement,
-} from './sculpter-element/sculpter-element.js';
+} from './sculpter-element/sculpter-element';
 
 import {
   sculpterDefine
-} from './sculpter-element/sculpter-define.js';
+} from './sculpter-element/sculpter-define';
 
 @sculpterDefine('a-component')
 class A extends SculpterElement {
