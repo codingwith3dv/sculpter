@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "composite": true,
-    "target": "es2015",
+    "target": "esnext",
     "experimentalDecorators": true,
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
     "allowJs": true,
     "declaration": true,
@@ -18,7 +18,7 @@
     "noImplicitThis": true,
     "noImplicitReturns": true
   },
-  "includes": [
+  "include": [
     "src/**/*.ts"
   ]
 }
