@@ -1,21 +1,32 @@
-type CustomElementConstructor<Type> = {
-  new (...args: unknown[]): Type;
-};
+import { SculpterElement } from './sculpter-element';
+import { Compiler } from './compiler';
+import { ComponentOptions } from './options';
 
-function defineCustomElement<Type extends HTMLElement>(
-  componentName: string,
-  component: CustomElementConstructor<Type>
-): CustomElementConstructor<Type> {
-  window.customElements.define(componentName, component);
-  return component;
+function defineComponent<T extends { new (...args: unknown[]): SculpterElement }>(
+  name: string,
+  instanceRef: T
+): void {
+  window.customElements.define(name, instanceRef);
+}
+
+function compileComponent<T extends typeof SculpterElement>(
+  options: ComponentOptions,
+  component: T
+): void {
+  // parse HTML and CSS
+  // make each element and append it into shadowRoot
+  Compiler.compileComponent(component, options);
+  // define element
+  defineComponent(options.name, component);
 }
 
 const sculpterDefine = 
-  (componentName: string) =>
-    (component: CustomElementConstructor<HTMLElement>): void => {
-      defineCustomElement(componentName, component);
+  <T extends typeof SculpterElement>( options: ComponentOptions ) =>
+    ( component: T ): void => {
+      compileComponent(options, component);
     };
 
 export {
-  sculpterDefine
+  sculpterDefine,
+  SculpterElement
 };
