@@ -6,7 +6,7 @@
   "scripts": {
     "build-concurrently": "clear && node node_modules/npm-run-all/bin/npm-run-all/index.js lint build bundle",
     "build": "node node_modules/typescript/bin/tsc",
-    "lint": "node node_modules/eslint/bin/eslint \"src/**/*.{js,ts}\"",
+    "lint": "node node_modules/eslint/bin/eslint \"src/**/*.{js,ts}\" --fix",
     "bundle": "node node_modules/rollup/dist/bin/rollup -c",
     "dev": "clear && node node_modules/typescript/bin/tsc -w"
   },
